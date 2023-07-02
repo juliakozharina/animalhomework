@@ -93,7 +93,7 @@ public class Main {
     }
 
     private static int parseWeight(String inputAge) {
-        return 1;
+        return 2;
     }
 
     private static boolean checkAge(String inputAge) {
