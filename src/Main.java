@@ -92,6 +92,10 @@ public class Main {
         }
     }
 
+    private static int parseWeight(String inputAge) {
+        return 1;
+    }
+
     private static boolean checkAge(String inputAge) {
         try {
             int age = Integer.parseInt(inputAge);
