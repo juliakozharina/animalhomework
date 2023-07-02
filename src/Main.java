@@ -70,10 +70,10 @@ public class Main {
         animal.setName(scanner.next());
 
         System.out.println("Введите возраст животного");
-        animal.setAge(parseAge(scanner.next()));
+        animal.setAge(parseAge());
 
         System.out.println("Введите вес животного");
-        animal.setWeight(Integer.parseInt(scanner.next()));
+        animal.setWeight(parseWeight());
 
         System.out.println("Введите цвет животного");
         animal.setColor(scanner.next());
@@ -81,30 +81,52 @@ public class Main {
         return animal;
     }
 
-    private static int parseAge(String inputAge) {
+    private static int parseAge() {
         while (true) {
+            String inputAge = scanner.next();
             if (checkAge(inputAge)) {
                 return Integer.parseInt(inputAge);
             } else {
-                System.out.println("Введено некорректное число, число должно быть от 1 до 100.");
+                System.out.println("Введено некорректное число, число должно быть от 1 до 20.");
                 System.out.println("Пожалуйста, попробуйте еще раз.");
             }
         }
     }
 
-    private static int parseWeight(String inputAge) {
-        return 2;
-    }
+
 
     private static boolean checkAge(String inputAge) {
         try {
             int age = Integer.parseInt(inputAge);
-            return age > 0 && age <= 100;
+            return age > 0 && age <= 20;
 
         } catch (NumberFormatException e) {
             return false;
         }
     }
 
-}
+    private static int parseWeight() {
+        while (true) {
+            String inputWeight = scanner.next();
+            if (checkWeight(inputWeight)) {
+                return Integer.parseInt(inputWeight);
+            } else {
+                System.out.println("Введено некорректное число, число должно быть от 1 до 40.");
+                System.out.println("Пожалуйста, попробуйте еще раз.");
+            }
+        }
+    }
 
+
+    private static boolean checkWeight(String inputWeight) {
+        try {
+            int age = Integer.parseInt(inputWeight);
+            return age > 0 && age <= 40;
+
+        } catch (NumberFormatException e) {
+            return false;
+
+        }
+
+    }
+}
