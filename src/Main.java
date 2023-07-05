@@ -94,7 +94,6 @@ public class Main {
     }
 
 
-
     private static boolean checkAge(String inputAge) {
         try {
             int age = Integer.parseInt(inputAge);

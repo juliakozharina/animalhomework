@@ -6,10 +6,12 @@ public enum AnimalTypeData {
     DUCK("утка");
 
     private String name;
-    AnimalTypeData(String name){
+
+    AnimalTypeData(String name) {
         this.name = name;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 }
