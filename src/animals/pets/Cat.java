@@ -2,7 +2,7 @@ package animals.pets;
 
 import animals.Animal;
 
-public class cat extends Animal {
+public class Cat extends Animal {
     public void say(){
         System.out.println("Мяу");
     }

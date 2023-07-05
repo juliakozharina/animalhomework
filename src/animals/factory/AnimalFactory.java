@@ -3,8 +3,8 @@ package animals.factory;
 import animals.Animal;
 import animals.bird.Duck;
 import animals.data.AnimalTypeData;
-import animals.pets.cat;
-import animals.pets.dog;
+import animals.pets.Cat;
+import animals.pets.Dog;
 
 
 public class AnimalFactory {
@@ -26,10 +26,10 @@ public class AnimalFactory {
 
         switch (animalTypeData) {
             case CAT:{
-                return new cat();
+                return new Cat();
             }
             case DOG:{
-                return new dog();
+                return new Dog();
             }
             default:{
                 return new Duck();
